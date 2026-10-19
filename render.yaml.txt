@@ -1,0 +1,20 @@
+# Render blueprint: push the contents of this folder as a repo, then
+# Render auto-detects this file (or create the Web Service manually with
+# the same values). The gateway respects Render's PORT env var.
+services:
+  - type: web
+    name: askme-deepseek-gateway
+    runtime: node
+    plan: free
+    startCommand: node askme-openai-gateway.mjs
+    envVars:
+      - key: DEEPSEEK_TOKEN
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: MODEL_ID
+        value: askme-ai
+      - key: DS_MODEL_ID
+        value: deepseek
+      - key: DS_SEARCH_MODEL_ID
+        value: deepseek-search

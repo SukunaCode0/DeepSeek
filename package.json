@@ -1,0 +1,9 @@
+{
+  "name": "askme-deepseek-gateway",
+  "version": "1.0.0",
+  "description": "AskMe AI + DeepSeek as an OpenAI-compatible API",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}
